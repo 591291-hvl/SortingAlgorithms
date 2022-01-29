@@ -1,4 +1,5 @@
 import random
+import numpy as np
 
 #N = 10
 
@@ -13,7 +14,7 @@ def fillTable2(n):
     table = []
     for i in range(n):
         table.append(i)
-    table = random.shuffle(table)
+    np.random.shuffle(table)
     return table
 
 

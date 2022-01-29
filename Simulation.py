@@ -9,7 +9,7 @@ import MergeSort
 
 
 
-table = BubbleSort.fillTable(100)
+table = BubbleSort.fillTable2(200)
 
 def showBubbleSort():
     N = len(table) 
@@ -59,7 +59,7 @@ def quickSort(table, low, high, xloc, barWidth):
         #print
         plt.cla()
         plt.bar(xloc, table, width=barWidth, color=(0.2, 0.4, 0.6, 0.6))
-        plt.pause(0.1)
+        plt.pause(0.01)
 
         quickSort(table,low, pi-1, xloc, barWidth)
         quickSort(table, pi +1, high, xloc, barWidth)

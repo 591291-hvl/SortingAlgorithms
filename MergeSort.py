@@ -14,8 +14,8 @@ def mergeSort(table, low, high):
         mid = (low + high-1)//2
         mergeSort(table, low, mid)
         mergeSort(table, mid+1, high)
-        print(table)
         merge(table, low, mid, high)
+        print(table)
 
 
 def merge(table, low, mid, high):

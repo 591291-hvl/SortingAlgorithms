@@ -1,7 +1,8 @@
 import random
 import numpy as np
 
-#N = 10
+
+N = 10
 
 #random numbers
 def fillTable(n):
@@ -36,7 +37,7 @@ def bubbleSort(table):
         print(table)
         sortTable(table)
 
-#tableArray = fillTable(N)
+tableArray = fillTable(N)
 
-#bubbleSort(tableArray)
-#print(tableArray)
+bubbleSort(tableArray)
+print(tableArray)

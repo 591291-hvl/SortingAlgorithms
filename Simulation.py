@@ -15,25 +15,30 @@ def showBubbleSort():
     N = len(table) 
     barWidth = .5
     xloc = np.arange(N)
-    p1 = plt.bar(xloc, table, width=barWidth, color=(0.2, 0.4, 0.6, 0.6))
-
+    
     while not BubbleSort.checkIfSorted(table):
         BubbleSort.sortTable(table)
         plt.cla()
+        plt.title('BubbleSort')
+        plt.xticks([])
+        plt.yticks([])
         plt.bar(xloc, table, width=barWidth, color=(0.2, 0.4, 0.6, 0.6))
         plt.pause(0.05)
     plt.show()
+
 
 
 def showSelectionSort():
     N = len(table)
     barWidth = .5
     xloc = np.arange(N)
-    p1 = plt.bar(xloc, table, width=barWidth, color=(0.2, 0.4, 0.6, 0.6))
 
     for i in range(len(table)-1):
         SelectionSort.sortTable(i, table)
         plt.cla()
+        plt.title('SelectionSort')
+        plt.xticks([])
+        plt.yticks([])
         plt.bar(xloc, table, width=barWidth, color=(0.2, 0.4, 0.6, 0.6))
         plt.pause(0.05)
     plt.show()
@@ -43,11 +48,13 @@ def showInsertionSort():
     N = len(table)
     barWidth = .5
     xloc = np.arange(N)
-    p1 = plt.bar(xloc, table, width=barWidth, color=(0.2, 0.4, 0.6, 0.6))
 
     for i in range(len(table)):
         InsertionSort.sortTable(i, table)
         plt.cla()
+        plt.title('InsertionSort')
+        plt.xticks([])
+        plt.yticks([])
         plt.bar(xloc, table, width=barWidth, color=(0.2, 0.4, 0.6, 0.6))
         plt.pause(0.05)
     plt.show()
@@ -58,6 +65,9 @@ def quickSort(table, low, high, xloc, barWidth):
         pi = QuickSort.partition(table, low, high)
         #print
         plt.cla()
+        plt.title('QuickSort')
+        plt.xticks([])
+        plt.yticks([])
         plt.bar(xloc, table, width=barWidth, color=(0.2, 0.4, 0.6, 0.6))
         plt.pause(0.01)
 
@@ -68,7 +78,6 @@ def showQuickSort():
     N = len(table)
     barWidth = .5
     xloc = np.arange(N)
-    p1 = plt.bar(xloc, table, width=barWidth, color=(0.2, 0.4, 0.6, 0.6))
 
     quickSort(table, 0 , len(table)-1, xloc, barWidth)
 
@@ -83,6 +92,9 @@ def mergeSort(table, low, high, xloc, barWidth):
         MergeSort.merge(table,low,mid,high)
         #print
         plt.cla()
+        plt.title('MergeSort')
+        plt.xticks([])
+        plt.yticks([])
         plt.bar(xloc, table, width=barWidth, color=(0.2, 0.4, 0.6, 0.6))
         plt.pause(0.01)
 
@@ -90,7 +102,6 @@ def showMergeSort():
     N = len(table)
     barWidth = .5
     xloc = np.arange(N)
-    p1 = plt.bar(xloc, table, width=barWidth, color=(0.2, 0.4, 0.6, 0.6))
 
     mergeSort(table, 0 , len(table)-1, xloc, barWidth)
 

@@ -33,3 +33,11 @@ MergeSort
 
 https://user-images.githubusercontent.com/69840782/153565444-04437318-9920-4700-bb66-54d364160f55.mp4
 
+
+
+StalinSort
+
+
+
+https://user-images.githubusercontent.com/69840782/159686829-9671807a-122c-45b1-827b-46f082cdb2d1.mp4
+

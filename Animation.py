@@ -135,9 +135,42 @@ def animateMergeSort():
     plt.rcParams['animation.ffmpeg_path'] ='C:\\Users\\47472\\Downloads\\ffmpeg-2021-12-20-git-631e31773b-full_build\\ffmpeg-2021-12-20-git-631e31773b-full_build\\bin\\ffmpeg.exe'
     animation.save('MergeSort.mp4')
 
+def stalinSort(table, xloc, barWidth, camera):
+    i = 0
+    size = len(table)-1
+    while size > i:
+        if table[i] > table[i+1]:
+            table.pop(i+1)
+            size -= 1
+        else:
+            i += 1
+        xloc = np.arange(len(table))
+        plt.bar(xloc, table, width=barWidth, color=(0.2, 0.4, 0.6, 0.6))
+        camera.snap()
+
+def animateStalinSort():
+    N = len(table)
+    barWidth = .5
+    xloc = np.arange(N)
+    fig = plt.figure()
+    plt.title('StalinSort')
+    camera = Camera(fig)
+    plt.xticks([])
+    plt.yticks([])
+
+    stalinSort(table, xloc, barWidth, camera)
+
+    animation = camera.animate(interval = 200, repeat = True, repeat_delay = 500)
+ 
+    #Saving the animation
+    plt.rcParams['animation.ffmpeg_path'] ='C:\\Users\\47472\\Downloads\\ffmpeg-2021-12-20-git-631e31773b-full_build\\ffmpeg-2021-12-20-git-631e31773b-full_build\\bin\\ffmpeg.exe'
+    animation.save('StalinSort.mp4')
+
+
 
 #animateBubbleSort()
-animateSelectionSort()
+#animateSelectionSort()
 #animateInsertionSort()
 #animateQuickSort()
 #animateMergeSort()
+animateStalinSort()
